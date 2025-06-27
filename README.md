@@ -1,22 +1,31 @@
-# Full Stack Developer Portfolio Website
+# MOHD ALLIFYAN B.N Portfolio Website
 
-This project, built using MERN and Framer Motion, is a full stack portfolio application with complete management of website content through associated admin panel.
+Saya adalah mahasiswa teknik informatika dengan kemampuan dasar dalam pemrograman menggunakan C, C#, Node.js, Laravel, Dart, dan Python.
 
 ### Main Sections
 
 - Header
 - About
-- Services
+Saya adalah seorang mahasiswa Sarjana Teknik Informatika yang sedang menempuh pendidikan di Universitas Maritim Raja Ali Haji. Selain menjadi mahasiswa, saya juga bekerja sebagai koki di Oasis Restaurant.
+
+- Artikel
+
 - Skills
+Memiliki kemampuan dalam logika pemrograman, pemecahan masalah kode, menguasai bahasa Python, dan ahli dalam memasak.
+
 - Projects
+
 - Testimonials
 - Freelancing
 - Contact
+Instagram: [fybane_](https://www.instagram.com/fybane_)
+GitHub: [fyban3](https://github.com/fyban3)
+
 - Get Notified
 
 ### Admin Panel
 
-With the admin panel, admin gain complete control over the website to manage projects, services, testimonials, contact users, website content, and more—all from one convenient dashboard.
+Panel admin memberikan kontrol penuh kepada admin untuk mengelola proyek, layanan, testimonial, pengguna kontak, konten situs web, dan lainnya—semua dari satu dashboard yang nyaman. Admin dapat menambah, menghapus, atau mengubah artikel, proyek, gambar, deskripsi, dan lainnya.
 
 ## Tech Stack
 
@@ -28,7 +37,7 @@ With the admin panel, admin gain complete control over the website to manage pro
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/naumanch969/fullstack-portfolio.git
+git clone https://github.com/fyban3/fullstack-portfolio.git
 ```
 
 2. Install dependencies:
@@ -52,9 +61,7 @@ Contributions are welcome! If you have any suggestions, enhancements, or bug fix
 
 ## Contact
 
-Have questions or feedback? Feel free to reach out to me:
+- Instagram: [fybane_](https://www.instagram.com/fybane_)
+- GitHub: [fyban3](https://github.com/fyban3)
 
-- Email: naumanch969@gmail.com
-- LinkedIn: [My LinkedIn Profile](https://www.linkedin.com/in/naumanch/)
-
-Thank you for visiting my repository and exploring my portfolio website! 😊🚀
+Terima kasih telah mengunjungi repositori saya dan menjelajahi situs portofolio saya! 😊🚀

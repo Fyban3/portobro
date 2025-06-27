@@ -47,7 +47,7 @@ const Testimonials = () => {
                         forwardHeading='testimonials'
                         small
                         backHeading='testimonials'
-                        detail='See what my satisfied clients have to say about my services. Partner with me to bring your web projects to life!'
+                        detail='Discover the experiences of my clients and how my web development services have helped them achieve their goals. Your satisfaction is my priority!'
                     />
                 </div>
 

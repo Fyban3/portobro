@@ -35,17 +35,14 @@ const About = () => {
                         forwardHeading='About Me'
                         backHeading='About'
                         detail={`
-                        Greetings,
+                        Halo,
                         <br/>
-I'm Nauman Chaudhry, a seasoned MERN stack developer with a passion for crafting exceptional digital experiences. With over a year of dedicated experience, I've had the privilege of working on a diverse range of projects. These include comprehensive full-stack web applications and meticulously designed RESTful APIs, all powered by technologies like MongoDB, Express.js, React.js, and Node.js.
+Saya MOHD ALLIFYAN B.N, mahasiswa teknik informatika dengan semangat untuk menciptakan pengalaman digital yang luar biasa. Saya senang belajar hal baru dan berkontribusi pada proyek open-source.
                         <br/>
-My commitment to continuous learning keeps me at the forefront of industry trends. I thrive on exploring new horizons in technology and contributing to open-source projects. Being an active part of coding communities brings me joy and enriches my knowledge.
+Terima kasih telah mengunjungi portofolio saya. Jangan ragu untuk menghubungi saya melalui Instagram atau GitHub.
                         <br/>
-I sincerely appreciate your presence on my portfolio. Whether you have inquiries or a collaborative project in mind, please don't hesitate to reach out. Together, we can shape the future of the digital landscape.
-                        <br/>
-Best regards,
-Nauman Chaudhry
-
+Salam hangat,
+MOHD ALLIFYAN B.N
                         `}
                         alignStart
                     />
@@ -58,4 +55,3 @@ Nauman Chaudhry
 }
 
 export default About
- 

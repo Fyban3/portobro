@@ -35,7 +35,7 @@ const Skills = () => {
                 <MainHeading
                     forwardHeading='Skills'
                     backHeading='Skills'
-                    detail='With a strong foundation in the MERN stack and extensive experience with front-end and back-end technologies, I am committed to staying up-to-date with the latest web development trends to deliver cutting-edge solutions that meet and exceed client expectations'
+                    detail='I specialize in web development with expertise in HTML5, CSS3, JavaScript, React JS, Redux, Material UI, Tailwind CSS, and MongoDB. My focus is on creating responsive and user-friendly applications while continuously improving my skills and staying updated with the latest technologies.'
                 />
             </div>
 

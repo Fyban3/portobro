@@ -47,7 +47,9 @@ const Footer = () => {
                     <div className='flex flex-col w-full gap-[1rem] '  >
                         <h3 className="text-[24px] font-semibold w-full" >About</h3>
                         <div className="flex flex-col jutify-between items-start gap-[24px] w-full text-textGray" >
-                            <p className="" >I am a skilled MERN stack developer with over a year of experience in web development. Proficient in MongoDB, Express.js, React.js, and Node.js, I create efficient web solutions. I actively contribute to open-source projects and coding communities.</p>
+                            <p className="" >
+                                Saya adalah mahasiswa teknik informatika.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -55,23 +57,26 @@ const Footer = () => {
                 <div className="text-white flex justify-start md:flex-nowrap flex-wrap flex-col md:gap-[1rem] sm:gap-[12px] gap-[12px] lg:w-fit md:w-[15rem] lg:max-w-[15rem] " >
                     <h3 className="text-[24px]  font-semibold   " >Links</h3>
                     <div className="flex flex-col gap-[1rem] " >
-                        {
-                            links.map((link, index) => (
-                                <Link
-                                    key={index}
-                                    to={link.link}
-                                    activeClass="active"   //class applied when element is reached
-                                    smooth={true}
-                                    spy={true}
-                                    offset={-100}
-                                    duration={300}
-                                    className={`hover:text-orange flex items-center ${link.link && 'cursor-pointer'} text-gray text-[16px] gap-[4px] `}
-                                >
-                                    <button className='text-inherit ' ><ArrowRightAlt className='text-gray' /></button>
-                                    <p className="" >{link.name}</p>
-                                </Link>
-                            ))
-                        }
+                        <Link
+                            to="https://www.instagram.com/fybane_"
+                            activeClass="active"
+                            smooth={true}
+                            spy={true}
+                            offset={-100}
+                            duration={300}
+                        >
+                            Instagram
+                        </Link>
+                        <Link
+                            to="https://github.com/fyban3"
+                            activeClass="active"
+                            smooth={true}
+                            spy={true}
+                            offset={-100}
+                            duration={300}
+                        >
+                            GitHub
+                        </Link>
                     </div>
                 </div>
 
