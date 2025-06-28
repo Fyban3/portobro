@@ -20,7 +20,7 @@ export const deleteImage = (filename) => API.delete(`/delete_image/${filename}`)
 
 // AUTH 
 export const register = (userData) => API.post(`/auth/register`, userData)
-export const login = (userData) => API.put(`/auth/login`, userData)
+export const login = (userData) => API.post(`/auth/login`, userData)
 export const logout = () => API.put(`/logout`)
 export const getUsers = () => API.get(`/user/get`)
 
@@ -77,3 +77,5 @@ export const getTestimonials = () => API.get(`/testimonial/get`)
 export const createTestimonial = (testimonialData) => API.post(`/testimonial/create`, testimonialData)
 export const updateTestimonial = (testimonialId, testimonialData) => API.put(`/testimonial/update/${testimonialId}`, testimonialData)
 export const deleteTestimonial = (testimonialId) => API.delete(`/testimonial/delete/${testimonialId}`)
+
+export default API;
