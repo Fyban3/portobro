@@ -1,4 +1,3 @@
-
 import { Home, Phone, Mail, Public } from "@mui/icons-material"
 import { motion } from "framer-motion"
 
@@ -31,11 +30,12 @@ const Contact = () => {
 
 
             {/* contact main heading */}
-            <div className="w-full flex justify-center " >
+            <div className="w-full flex justify-center">
                 <MainHeading
-                    forwardHeading='Contact'
-                    backHeading='Contact'
-                    detail="Excited to discuss your web project and help you achieve your goals! Let's connect and explore how my expertise can bring your vision to reality. Feel free to reach out to me today and let's collaborate on your web success!"
+                    forwardHeading={<span className="text-orange">Contact</span>}
+                    backHeading="Contact"
+                    detail="Feel free to reach out to me for collaboration, project inquiries, or just to connect. I am always open to new opportunities and discussions."
+                    className="text-orange font-extrabold shadow-none text-center"
                 />
             </div>
 

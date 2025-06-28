@@ -38,9 +38,10 @@ const Blogs = () => {
 
             <div className="w-full flex justify-center " >
                 <MainHeading
-                    forwardHeading='Blogs'
-                    backHeading='Blogs'
-                    detail='In my blog posts, I share my insights and expertise on the latest web development trends, covering topics such as the MERN stack, front-end frameworks, back-end technologies, and best practices for building robust and scalable web applications.'
+                    forwardHeading={<span className="text-orange">Blogs</span>}
+                    backHeading="Blogs"
+                    detail="In my blog posts, I share my insights and expertise on the latest web development trends, covering topics such as the MERN stack, front-end frameworks, back-end technologies, and best practices for building robust and scalable web applications."
+                    className="text-orange font-extrabold shadow-none text-center"
                 />
             </div>
 

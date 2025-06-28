@@ -39,53 +39,18 @@ const Testimonials = () => {
                 animate={{ y: [0, 1] }}
                 transition={{ duration: .3, delayChildren: .5 }}
                 name="testimonials"
-                className="flex flex-col mb-[10rem] "
+                className="bg-white text-black py-10 px-5"
             >
 
-                <div className="w-full flex justify-center " >
+                <div className="w-full flex justify-center">
                     <MainHeading
-                        forwardHeading='testimonials'
+                        forwardHeading={<span className="text-orange">Testimonials</span>}
                         small
-                        backHeading='testimonials'
-                        detail='Discover the experiences of my clients and how my web development services have helped them achieve their goals. Your satisfaction is my priority!'
+                        backHeading="Testimonials"
+                        detail="Discover the experiences of my clients and how my web development services have helped them achieve their goals. Your satisfaction is my priority!"
+                        className="text-orange font-extrabold shadow-none text-center"
                     />
                 </div>
-
-{/* 
-                <div className="testimonials">
-                    <Swiper
-                        effect={'coverflow'}
-                        grabCursor={true}
-                        centeredSlides={true}
-                        slidesPerView={'auto'}
-                        coverflowEffect={{
-                            rotate: 0,
-                            stretch: 0,
-                            depth: 0,
-                            modifier: 1,
-                            slideShadows: true,
-                        }}
-                        loop={true}
-                        modules={[EffectCoverflow]}
-                        className="mySwiper"
-                    >
-                        <SwiperSlide>
-                            <div className="card">
-                                <div className="layer"></div>
-                                <div className="content">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, deleniti? Saepe iste aliquid sunt corporis fuga iusto odio suscipit architecto, culpa harum alias.</p>
-                                    <div className="imgBx">
-                                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                                    </div>
-                                    <div className="details">
-                                        <h2>Someone Famous <br /> <span>Website Designer</span> </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    </Swiper>
-                </div> */}
-
 
                 <Swiper
                     effect={"coverflow"}
@@ -97,20 +62,21 @@ const Testimonials = () => {
                         stretch: 0,
                         depth: 100,
                         modifier: 1,
-                        slideShadows: true,
+                        slideShadows: false,
                     }}
                     pagination={true}
                     modules={[EffectCoverflow, Pagination]}
-                    className="w-full py-[50px] "
+                    className="w-full py-10"
                 >
                     {
                         testimonials.map((testimonial, index) => (
-                            <SwiperSlide key={index} className="w-[300px] " >
+                            <SwiperSlide key={index} className="w-[300px] bg-gray-100 rounded-md shadow-md">
                                 <TestimonialsCard
                                     content={testimonial.content}
                                     name={testimonial.name}
                                     designation={testimonial.designation}
                                     image={testimonial.image}
+                                    className="text-gray-800"
                                 />
                             </SwiperSlide>
                         ))
@@ -123,4 +89,4 @@ const Testimonials = () => {
     )
 }
 
-export default Testimonials
+export default Testimonials;

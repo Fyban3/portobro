@@ -36,68 +36,66 @@ const Update = ({ open, setOpen, blog }) => {
 
 
     return (
-        <Modal open={open} onClose={() => setOpen(false)} className='w-screen h-screen flex justify-center items-center ' >
-            <div className="sm:w-[20rem] w-[90%] max-h-[80%] overflow-y-scroll border-textGray border-[1px] rounded-[4px] " >
-
-                <div className="w-full flex justify-start items-center py-[12px] px-[8px] bg-lightGray text-white shadow-xl ">
-                    <h3 className='text-[20px]   ' >Update Blog</h3>
+        <Modal open={open} onClose={() => setOpen(false)} className="w-screen h-screen flex justify-center items-center">
+            <div className="sm:w-[20rem] w-[90%] max-h-[80%] overflow-y-scroll border-gray-300 border-[1px] rounded-md bg-white shadow-lg">
+                <div className="w-full flex justify-start items-center py-4 px-4 bg-gray-100">
+                    <h3 className="text-lg font-extrabold text-orange shadow-none">Update Blog</h3>
                 </div>
 
-                <div className="p-[1rem] bg-darkGray flex flex-col gap-[1rem] w-full " >
-                    <div className="flex justify-center items-center w-full min-h-[10rem] bg-lightGray rounded-[8px] " >
+                <div className="p-5 bg-white flex flex-col gap-5 w-full">
+                    <div className="flex justify-center items-center w-full min-h-[10rem] bg-gray-100 rounded-md">
                         <Upload image={blogData?.image} />
                     </div>
-                    <div className={`flex flex-col `}  >
-                        <h6 className={`capitalize w-full text-[16px] text-white `}>Name:</h6>
+                    <div className="flex flex-col">
+                        <label className="capitalize w-full text-sm text-gray-700">Name:</label>
                         <TextareaAutosize
-                            type='text'
-                            autoComplete='off'
-                            placeholder='Name'
+                            type="text"
+                            autoComplete="off"
+                            placeholder="Name"
                             value={blogData?.name}
-                            name='name'
+                            name="name"
                             onChange={handleChange}
-                            className={`w-full bg-black h-[40px] rounded-[4px] px-[8px] py-[8px] resize-none outline-none text-[16px] text-textGray text-start   `}
+                            className="w-full bg-gray-100 h-[40px] rounded-md px-3 py-2 resize-none outline-none text-sm text-gray-800"
                         />
                     </div>
-                    <div className={`flex flex-col `}  >
-                        <h6 className={`capitalize w-full text-[16px] text-white `}>Title:</h6>
+                    <div className="flex flex-col">
+                        <label className="capitalize w-full text-sm text-gray-700">Title:</label>
                         <TextareaAutosize
-                            type='text'
-                            autoComplete='off'
-                            placeholder='Title'
+                            type="text"
+                            autoComplete="off"
+                            placeholder="Title"
                             value={blogData?.title}
-                            name='title'
+                            name="title"
                             onChange={handleChange}
-                            className={`w-full bg-black h-[40px] rounded-[4px] px-[8px] py-[8px] resize-none outline-none text-[16px] text-textGray text-start  `}
+                            className="w-full bg-gray-100 h-[40px] rounded-md px-3 py-2 resize-none outline-none text-sm text-gray-800"
                         />
                     </div>
-                    <div className={`flex flex-col `}  >
-                        <h6 className={`capitalize w-full text-[16px] text-white `}>Description:</h6>
+                    <div className="flex flex-col">
+                        <label className="capitalize w-full text-sm text-gray-700">Description:</label>
                         <TextareaAutosize
-                            type='text'
-                            autoComplete='off'
-                            placeholder='Description'
+                            type="text"
+                            autoComplete="off"
+                            placeholder="Description"
                             value={blogData?.description}
-                            name='description'
+                            name="description"
                             onChange={handleChange}
                             minRows={5}
                             maxRows={5}
-                            className={`w-full bg-black h-[40px] rounded-[4px] px-[8px] py-[8px] resize-none outline-none text-[16px] text-textGray text-start overflow-y-scroll  `}
+                            className="w-full bg-gray-100 rounded-md px-3 py-2 resize-none outline-none text-sm text-gray-800 overflow-y-scroll"
                         />
                     </div>
-                    <div className='flex w-full justify-end gap-[8px] '>
-                        <button onClick={() => setOpen(false)} className="bg-[#0d0d0d] text-white rounded-[4px] px-[6px] py-[4px]">
+                    <div className="flex w-full justify-end gap-3">
+                        <button onClick={() => setOpen(false)} className="bg-gray-200 text-black rounded-md px-4 py-2">
                             Close
                         </button>
-                        <button onClick={handleUpdateBlog} className="bg-orange text-white rounded-[4px] px-[6px] py-[4px]" >
-                            {isFetching ? 'Updating...' : 'Update'}
+                        <button onClick={handleUpdateBlog} className="bg-gray-800 text-white rounded-md px-4 py-2">
+                            {isFetching ? "Updating..." : "Update"}
                         </button>
                     </div>
                 </div>
-
             </div>
         </Modal>
     )
 }
 
-export default Update
+export default Update;

@@ -29,7 +29,7 @@ const Navbar = ({ navbarMenuRef, showMenu, setShowMenu }) => {
 
             <div className="flex items-center gap-[1rem] " >
                 <button className="" onClick={() => setShowSidebar(pre => !pre)} ><Dehaze /></button>
-                <h3 onClick={() => { navigate('/') }} style={{ fontFamily: 'cursive' }} className=" text-3xl font-bold cursor-pointer text-orange " >Nauman</h3>
+                <h3 onClick={() => { navigate('/') }} style={{ fontFamily: 'cursive' }} className=" text-3xl font-bold cursor-pointer text-orange " >Fyan</h3>
             </div>
 
             <div className="flex items-center gap-[1rem] " >

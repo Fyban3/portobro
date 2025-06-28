@@ -37,37 +37,31 @@ const Projects = () => {
         <motion.section
             whileInView={{ opacity: [0, 1] }}
             animate={{ y: [0, 1] }}
-            transition={{ duration: 0.3, delayChildren: 0.5 }}
+            transition={{ duration: .3, delayChildren: .5 }}
             name="projects"
-            className="h-auto w-full flex flex-col"
+            className="bg-white text-black py-10 px-5 rounded-xl shadow"
         >
             <div className="w-full flex justify-center">
                 <MainHeading
-                    forwardHeading="Projects"
+                    forwardHeading={<span className="text-orange">Projects</span>}
                     backHeading="Projects"
-                    detail="Transforming complex ideas into functional and intuitive web solutions that address unique needs and exceed user expectations with the latest web technologies and frameworks"
+                    detail="A selection of my work, focused on clean code and elegant solutions."
+                    className="text-orange font-extrabold shadow-none text-center"
                 />
             </div>
-
-
-            <div className="flex flex-col gap-[1rem] ">
-                <div className="flex flex-wrap md:justify-center justify-center gap-[1rem] mt-[3rem] sm:p-0 p-[2rem] ">
-                    {currentProjects.map((project, index) => (
-                        <ProjectCard project={project} index={index} key={index} />
-                    ))}
-                </div>
-                {
-                    projects.length > projectsPerPage &&
-                    <div className="w-full flex justify-center items-center">
-                        <Pagination
-                            count={Math.ceil(projects.length / projectsPerPage)}
-                            page={currentPage}
-                            onChange={handlePageChange}
-                        />
-                    </div>
-                }
+            <div className="flex flex-wrap justify-center gap-8 mt-10">
+                {currentProjects.map((project, index) => (
+                    <ProjectCard key={index} project={project} className="bg-gray-100 text-gray-800 rounded-md shadow-md" />
+                ))}
             </div>
-
+            <div className="flex justify-center mt-8">
+                <Pagination
+                    count={Math.ceil(projects.length / projectsPerPage)}
+                    page={currentPage}
+                    onChange={handlePageChange}
+                    color="primary"
+                />
+            </div>
         </motion.section>
     );
 };

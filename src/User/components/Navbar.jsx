@@ -81,27 +81,26 @@ const Navbar = ({ navbarMenuRef, showMenu, setShowMenu }) => {
     return (
         <>
             {/* desktop navbar */}
-            <nav className="lg:flex lg:flex-col hidden justify-between min-h-[5rem] items-center bg-black text-white  " >
-                <div className="w-full flex justify-between items-center py-[20px] px-[4rem] " >
-                    <Link to="/" className="" >
-                        <h3 style={{ fontFamily: 'cursive' }} className=" text-[40px] font-bold cursor-pointer text-orange " >Nauman</h3>
+            <nav className="lg:flex lg:flex-col hidden justify-between min-h-[5rem] items-center bg-white text-black border-b border-gray-200 shadow-sm">
+                <div className="w-full flex justify-between items-center py-4 px-12">
+                    <Link to="/" className="">
+                        <h3 className="text-3xl font-bold cursor-pointer text-black tracking-tight">Fyan</h3>
                     </Link>
-                    {/* navLinks */}
                     {
                         pathname == '/' &&
-                        <div className="flex justify-center items-center gap-[20px] " >
+                        <div className="flex justify-center items-center gap-8">
                             {
                                 navLinks.map((link, index) => (
-                                    <div key={index} className="flex flex-col justify-center items-center w-auto " >
+                                    <div key={index} className="flex flex-col justify-center items-center w-auto">
                                         <Link
                                             id="link"
                                             to={`${link.toLowerCase()}`}
-                                            activeClass="active"   //class applied when element is reached
+                                            activeClass="active"
                                             smooth={true}
                                             spy={true}
                                             offset={-100}
                                             duration={300}
-                                            className="capitalize text-white cursor-pointer text-[20px] font-medium hover:text-[#938f8e] hover:scale-110 duration-500 "
+                                            className="capitalize text-gray-700 cursor-pointer text-lg font-medium hover:text-black hover:underline transition"
                                         >
                                             {link}
                                         </Link>
@@ -110,34 +109,33 @@ const Navbar = ({ navbarMenuRef, showMenu, setShowMenu }) => {
                             }
                         </div>
                     }
-                    {/* account/signup/login */}
-                    <div className="flex justify-between  " >
+                    <div className="flex justify-between">
                         {
                             loggedUser
                                 ?
-                                <div className="flex items-center gap-[1rem] " >
-                                    <p className="text-[24px] capitalize " >{loggedUser?.name?.split(' ')[0]}</p>
-                                    <div className="relative  " >
-                                        <span onClick={() => { setShowMenu(pre => !pre); }} className="flex justify-center items-center bg-orange rounded-[50%] w-[40px] h-[40px] text-[24px] capitalize cursor-pointer " >{loggedUser?.name?.charAt(0)}</span>
+                                <div className="flex items-center gap-4">
+                                    <p className="text-lg capitalize">{loggedUser?.name?.split(' ')[0]}</p>
+                                    <div className="relative">
+                                        <span onClick={() => { setShowMenu(pre => !pre); }} className="flex justify-center items-center bg-orange rounded-full w-10 h-10 text-lg capitalize cursor-pointer text-white">{loggedUser?.name?.charAt(0)}</span>
                                         {
                                             showMenu &&
                                             <motion.div
                                                 ref={navbarMenuRef}
                                                 animate={{ x: [100, 0], opacity: [0, 1] }}
-                                                className="absolute top-[120%] right-[50%] border-[1px] border-white bg-lightGray p-[12px] gap-[8px] rounded-[4px] flex flex-col  "
+                                                className="absolute top-[120%] right-[50%] border border-gray-200 bg-white p-3 gap-2 rounded-md flex flex-col shadow"
                                             >
-                                                {loggedUser.role == 'admin' && <button onClick={switchMode} className="flex gap-[8px] w-full min-w-max hover:bg-darkGray p-[6px] rounded-[4px] " ><SwitchLeftOutlined className="" />Switch Mode</button>}
-                                                <button onClick={logoutFunc} className="flex gap-[8px] w-full min-w-max hover:bg-darkGray p-[6px] rounded-[4px] " ><SwitchLeftOutlined className="" />Logout</button>
+                                                {loggedUser.role == 'admin' && <button onClick={switchMode} className="flex gap-2 w-full min-w-max hover:bg-gray-100 p-2 rounded-md text-gray-700">Switch Mode</button>}
+                                                <button onClick={logoutFunc} className="flex gap-2 w-full min-w-max hover:bg-gray-100 p-2 rounded-md text-gray-700">Logout</button>
                                             </motion.div>
                                         }
                                     </div>
                                 </div>
                                 :
-                                <div className="flex gap-[1rem] " >
-                                    <button onClick={navigateToLogin} className={`font-['PoppinsRegular'] bg-black text-white cursor-pointer border-white border-[1px] font-normal rounded-[40px] px-[1.5rem] tracking-[1.2] py-[1rem] w-fit h-fit `}>
+                                <div className="flex gap-4">
+                                    <button onClick={navigateToLogin} className="btn bg-white text-black border border-gray-300 rounded-full px-6 py-2 font-normal hover:bg-gray-100 hover:text-orange transition">
                                         Login
                                     </button>
-                                    <button onClick={navigateToRegister} className={`font-['PoppinsRegular'] bg-orange text-black cursor-pointer border-white border-[1px] font-semibold rounded-[40px] px-[1.5rem] tracking-[1.2] py-[1rem] w-fit h-fit `}>
+                                    <button onClick={navigateToRegister} className="btn bg-orange text-white border-none rounded-full px-6 py-2 font-semibold hover:bg-black hover:text-orange transition">
                                         Register
                                     </button>
                                 </div>
@@ -146,27 +144,11 @@ const Navbar = ({ navbarMenuRef, showMenu, setShowMenu }) => {
                 </div>
             </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             {/* mobile navbar */}
             <div className="flex lg:hidden w-full bg-black flex-col items-end sticky top-0 left-0 z-50 px-[2rem] py-[12px] " >
                 <div className="flex justify-between w-full items-center " >
                     <Link to="home" className="" >
-                        <h3 onClick={() => navigate('/')} style={{ fontFamily: 'cursive' }} className=" text-3xl font-bold cursor-pointer text-orange " >Nauman</h3>
+                        <h3 onClick={() => navigate('/')} style={{ fontFamily: 'cursive' }} className=" text-3xl font-bold cursor-pointer text-orange " >Fyan</h3>
                     </Link>
                     <div className='flex ' >
                         <IconButton onClick={toggleShowNavbar} >
